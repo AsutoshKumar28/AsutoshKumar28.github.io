@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+</head>
+<body>
+<!--CSS START-->
+    <style>
+        body
+        {
+           
+            background-color: blueviolet;
+        }
+        .value
+        {
+            text-align: center;
+        }
+        .btn
+        {   height:50px;
+            color:purple;
+            border-radius: 10px;
+            border:2px solid black;
+        }
+        span{
+            display:grid;
+            grid-template-columns: auto auto auto;
+        }
+        h1{
+            background-color: rgb(185, 135, 40);
+            height: 50px;
+            padding:15px 0px 15px 0px;
+        }
+    </style>
+ <!--CSS END-->
+   
+        <h1  id="val" class="value">0</h1>
+    <span>
+        <button class="btn" id="downcounter">Downcounter</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="upcounter">Upcounter</button>
+    </span>
+    
+<!--Javascript START-->
+
+    <script>
+        var down=document.getElementById("downcounter");
+        var up=document.getElementById("upcounter");
+        var ne=document.getElementById("val"); 
+        var rse=document.getElementsByClassName("reset");
+//RESET START
+        reset.addEventListener("click" , function(){
+            ne.innerHTML="0";
+        });
+//RESET END
+
+//UPCONTER START
+        upcounter.addEventListener("click", function()
+        {
+            var u=parseInt(ne.innerHTML)
+            u++;
+             ne.innerHTML=u;
+            console.log(u);
+         });
+//UPCOUNTER END
+
+//DOWNCOUNTER START
+         downcounter.addEventListener("click",function(){
+            var u=parseInt(ne.innerHTML)
+            u--;
+             ne.innerHTML=u;
+         });
+//DOWNCOUNTER END
+    </script>
+        <!--Javascript-->
+</body>
+</html>

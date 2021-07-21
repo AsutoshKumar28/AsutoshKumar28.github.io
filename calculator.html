@@ -1,0 +1,157 @@
+
+<html>
+    <head>
+        <title>
+                CALCULATOR
+        </title>
+        <style>
+
+            #calculator
+                {   background-color: cadetblue;
+                    animation-name:body_da ;
+                    animation-iteration-count: infinite;
+                    animation-duration:10s;
+                    text-align: center;
+                    padding: 10px ;
+                    margin: 10px 0px 10px 0px ;
+                    height: 20vh;
+                    font-size: 30px;
+                }
+         @keyframes body_da
+            {
+                0%
+                {
+                    background-color:white;
+                    color:black;
+                }
+               60%
+                {
+                    background-color:black;
+                    color:white;
+                }
+                100%
+                {
+                    background-color:white;
+                    color:black;
+                }
+             }
+            .grid_cont
+            {
+                display:grid;
+                grid-template-columns:auto auto auto auto;
+                height:100vh;
+               
+                background-color:black;
+                
+            }
+            .grid_cont>.item
+            {
+                text-align: center;
+                padding: 20px 0;
+                height:20vh;
+                font-size: 30px;
+            }
+            .grid_cont>.item1
+            {
+                background-color: rgba(192, 18, 18, 0.8);
+                
+               }
+               .grid_cont>.item2
+               {
+               
+                background-color: blueviolet;
+               
+               }   
+           
+            #input
+            { grid-column-start:1 ;
+                grid-column-end: 4;
+                font-size: 40px;
+                text-align: right;
+            }
+          #equals
+          {
+            background-color: blueviolet;  
+              grid-area:4/4/6/5 ;
+              font-size: 20px;
+          }
+          .item
+          {
+              background-color:floralwhite;
+              height:50px ;
+              border-radius: 10px;
+          }
+        
+        
+        </style>
+
+
+
+</head>
+    <body id= "Body_anim">
+        <section id="blue">
+        <form name="proxy">
+    <div id= "calculator"> <strong><h1>CALCULATOR</h1></strong></div>   
+        
+        <div class="grid_cont" >
+            
+            <input type = "text" id="input"  class="item" name= jock>
+            <input type="button" value="AC" class="item item2" onclick="proxy.jock.value=' ' " >
+            <input type="button" class="item item1" value="1" onclick="proxy.jock.value += '1'" onkeydown="proxy.jock.value='1'">
+            <input type="button" class="item item1" value="2" onclick="proxy.jock.value += '2' ">
+            <input type="button" class="item item1" value="3" onclick="proxy.jock.value += '3' ">
+            <input type="button" class="item item2" value="+" onclick="proxy.jock.value += '+' ">
+            <input type="button" class="item item1" value="4" onclick="proxy.jock.value += '4' ">
+            <input type="button" class="item item1" value="5" onclick="proxy.jock.value += '5' ">
+            <input type="button" class="item item1" value="6" onclick="proxy.jock.value += '6' ">
+            <input type="button" class="item item2" value="-" onclick="proxy.jock.value += '-' ">
+            
+            <input type="button" class="item item1" value="7" onclick="proxy.jock.value += '7' ">
+            <input type="button" class="item item1" value="8" onclick="proxy.jock.value += '8' ">
+            <input type="button" class="item item1" value="9" onclick="proxy.jock.value += '9' ">
+            <input type="button"  id="equals" value="=" >  <!--onclick="proxy.jock.value += '=' ">-->
+            <input type="button" class="item item2" value="*" onclick="proxy.jock.value += '*' ">
+            <input type="button" class="item item1" value="0" onclick="proxy.jock.value += '0' ">
+            <input type="button" class="item item2" value="/" onclick="proxy.jock.value += '/' ">
+
+        </section>
+        
+   <!-- Javascript-->
+   <script>
+       var equal=document.getElementById("equals");
+       var ne=document.getElementById('input');
+       equals.addEventListener("click",function(){
+           var joc=document.proxy.jock.value;  
+           ne.value=eval(joc);
+    
+       });
+    var j=document.getElementById("input");
+    var p=document.getElementsByClassName(item);
+    console.log(p);
+    //  console.log(j);
+
+window.addEventListener("keypress",function(){
+
+
+})
+    var k
+    j.addEventListener("keypress", function(){
+       if(event.keyCode<=47||event.keyCode>=56)// ||event.keyCode<=40 ||event.keyCode>=43)
+        {      
+              event.preventDefault();
+        }
+    else
+        {
+                console.log(event.keyCode)
+        }
+    });
+    //buttons=document.querySelectorAll('button')
+   
+    </script>
+<!-- Javascript-->
+            
+       </div>   
+    </form>
+    </body>
+</html>
+

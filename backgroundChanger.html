@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Flipper</title>
+
+</head>
+<body>
+
+<!--CSS-->
+    <style>
+    body{
+        text-align: center;
+        background-color:#225025;
+    }     
+    .low{
+        background-color: red;
+        border-radius: 5px;
+        text-decoration: underline;
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+    }
+   
+    #btn
+    {
+        background-color: transparent;
+        border: 3px solid black;
+        border-radius:5px;
+        height: 50px;
+        width: 150px;
+    }
+    #btn:hover
+    {
+        background-color: blue;
+    }
+</style>
+<!--CSS-->
+
+
+    <h1 class="low"> Background Color :<span id="colour">#225025</span></h1>
+    <button id="btn" class="as"><strong>CLICK ME</strong></button>
+ 
+
+    <!--JavaScritp-->
+    <script >
+   
+        const color=['1','2', '3', '4', '5','6','7','8','9','A', 'B',' C' ,'D','E' ,'F'];
+        
+       var ra;   
+       var ac=document.getElementById("btn");
+        btn.addEventListener("click", function(){console.log("ASu");
+       let ren='#'; 
+       console.log(Math.floor(16.99));
+       
+            for(var i=0;i<6;++i)
+            {
+                ra=Math.floor(Math.random()*15);
+                ren+=color[ra];
+                console.log(ren);
+               
+            }
+            document.body.style.backgroundColor=ren;
+            document.getElementById("colour").innerHTML=ren;
+        });
+    
+     </script>
+<!--JavaScritp-->
+
+</body>
+</html>
